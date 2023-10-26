@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body { 
+    font-family: sans-serif;
+    background: #dbe9ff;
+    height: 100rem;
+    position: relative;
+    top: 50%;
+}
+ul,
+li {
+    list-style-type: none;
+}
+.container {
+    background: #f0f9ff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: min(90%, 31.25em);
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 13px;
+    box-shadow: 0 32px 60px rgba(0, 162, 255, 0.29);
+}
+.timer-display {
+    position: relative;
+    left: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 110%;
+    background: linear-gradient(-45deg, #56ccf2, #2f80ed);
+    color: #fff;
+    font-size: 40px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(12, 187, 213, 0.2);
+    animation: mesh 5s ease infinite;
+}
+.bg-animation {
+    background: linear-gradient(45deg, #56ccf2, #2f80ed, #0ea6d8, #0a6ae9);
+    background-size: 400% 400%;
+    animation: mesh 5s ease infinite;
+}
+@keyframes mesh {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.btns {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 60px auto 0 auto;
+}
+.reset-btn,
+.play-btn,
+.lap-btn {
+    font-size: 18px;
+    background: #56ccf2;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 24px;
+    cursor: pointer;
+    outline: none;
+}
+.reset-btn:hover,
+.play-btn:hover,
+.lap-btn:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #56ccf2, #2f80ed);
+}
+.display-none {
+    display: none;
+}
+.laps {
+    display: grid;
+    place-items: center;
+    width: 80%;
+    margin: 60px auto 0 auto;
+    text-align: center;
+}
+.lap-item {
+    display: inline-block;
+    width: 300px;
+    padding: 16px;
+    margin: 12px;
+    background: transparent;
+    border: 2px solid #56ccf2;
+    border-radius: 28px;
+}
+.time-stamp {
+    margin-left: 25px;
+}
+.lap-clear {
+    width: 300px;
+    margin-top: 18px;
+    padding: 16px;
+    background: transparent;
+    border: 2px solid #56ccf2;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10;
+}
+.lap-clear:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #56ccf2, #2f80ed);
+}
